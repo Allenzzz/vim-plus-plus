@@ -31,6 +31,7 @@ set number               " 开启行号显示
 set cursorline           " 高亮显示当前行
 set whichwrap+=<,>,h,l   " 设置光标键跨行
 set virtualedit=block,onemore   " 允许光标出现在最后一个字符的后面
+set mouse=v              " 设置使用鼠标模式
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 代码缩进和排版
@@ -47,6 +48,11 @@ set softtabstop=4        " 设置4个空格为制表符
 set smarttab             " 在行和段开始处使用制表符
 set nowrap               " 禁止折行
 set backspace=2          " 使用回车键正常处理indent,eol,start等
+
+"copy and paste-settings
+vmap <C-c> "+y
+nmap <C-v> "+p
+set pastetoggle=<F12>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 代码补全
@@ -117,7 +123,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/L9'
 Plug 'vim-scripts/a.vim'
 Plug 'vim-scripts/txt.vim'
-Plug 'ryanoasis/vim-devicons'
+" Plug 'ryanoasis/vim-devicons'
 Plug 'mhinz/vim-startify'
 Plug 'junegunn/vim-slash'
 Plug 'junegunn/gv.vim'
@@ -130,6 +136,10 @@ Plug 'Shougo/echodoc.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'terryma/vim-smooth-scroll'
 Plug 'terryma/vim-expand-region'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'othree/html5.vim'
+Plug 'plasticboy/vim-markdown'
+Plug 'flazz/vim-colorschemes'
 
 call plug#end()            
 
@@ -154,9 +164,9 @@ nnoremap <c-p> :bp<cr>
 nnoremap <leader>d :bd<cr>
 
 " 主题
-set background=dark
-let g:onedark_termcolors=256
-colorscheme onedark
+"set background=dark
+"let g:onedark_termcolors=256
+colorscheme SolarizedDark
 
 " airline
 let g:airline_theme="onedark"
