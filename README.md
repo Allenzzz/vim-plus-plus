@@ -2,8 +2,13 @@
 
 An automatic configuration program for vim
 ===============================================
+Frank Liu的至尊无敌,py,go,c,c++,java,md终极配置vim-plus-plus
 
 ![][2]
+
+## 天秀
+
+![](https://github.com/FLHonker/vim-plus-plus/blob/master/screenshots/plus.png?raw=true)
 
 安装
 ------------
@@ -231,8 +236,8 @@ Q & A
     ![][49]
 
 
-  [1]: https://raw.githubusercontent.com/chxuan/vimplus/master/screenshots/vimplus-logo.png
-  [2]: https://raw.githubusercontent.com/chxuan/vimplus/master/screenshots/main.png
+  [1]: https://github.com/FLHonker/vim-plus-plus/blob/master/screenshots/vimplus-logo.png?raw=true
+  [2]: https://github.com/FLHonker/vim-plus-plus/blob/master/screenshots/main.png?raw=true
   [3]: https://brew.sh/
   [4]: https://github.com/junegunn/vim-plug
   [5]: https://github.com/Valloric/YouCompleteMe
