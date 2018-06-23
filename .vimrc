@@ -362,7 +362,7 @@ func SetComment()
         call setline(1, '// C source file')
     elseif expand("%:e") == 'cpp'
         call setline(1, '// C++ source file')
-    elseif expand("%:e") == 'cpp'
+    elseif expand("%:e") == 'sh'
         call setline(1, '#!/bin/bash')
     elseif expand("%:e") == 'py'
         call setline(1, '# -*- coding: UTF-8 -*-')
