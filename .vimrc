@@ -345,7 +345,7 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " SET Comment START
 """"""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd BufNewFile *.go,*.java,*.h,*.hpp,*.c,*.cc,*.cpp,*.py exec ":call SetComment()" 
+autocmd BufNewFile *.go,*.java,*.h,*.hpp,*.c,*.cc,*.cpp,*.sh,*.py exec ":call SetComment()" 
 "|normal 10Go
 func SetComment()
     if expand("%:e") == 'go'
@@ -362,6 +362,8 @@ func SetComment()
         call setline(1, '// C source file')
     elseif expand("%:e") == 'cpp'
         call setline(1, '// C++ source file')
+    elseif expand("%:e") == 'cpp'
+        call setline(1, '#!/bin/bash')
     elseif expand("%:e") == 'py'
         call setline(1, '# -*- coding: UTF-8 -*-')
     endif
