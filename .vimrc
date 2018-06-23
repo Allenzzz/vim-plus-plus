@@ -108,7 +108,6 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdtree'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'rkulla/pydiction'
 Plug 'Valloric/YouCompleteMe'
 Plug 'godlygeek/tabular'
 Plug 'tpope/vim-fugitive'
@@ -140,6 +139,11 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'othree/html5.vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'flazz/vim-colorschemes'
+Plug 'vim-scripts/indentpython.vim'
+Plug 'rkulla/pydiction'
+Plug 'scrooloose/syntastic'
+Plug 'nvie/vim-flake8'
+Plug 'kien/ctrlp.vim'
 
 call plug#end()            
 
@@ -337,3 +341,46 @@ nnoremap <leader>gg :GV?<cr>
 if filereadable(expand($HOME . '/.vimrc.local'))
     source $HOME/.vimrc.local
 endif
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" SET Comment START
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd BufNewFile *.go,*.java,*.h,*.hpp,*.c,*.cc,*.cpp,*.py exec ":call SetComment()" 
+"|normal 10Go
+func SetComment()
+    if expand("%:e") == 'go'
+        call setline(1, "// Go file")
+    elseif expand("%:e") == 'java'
+        call setline(1, '// Java file')
+    elseif expand("%:e") == 'h'
+        call setline(1, '// C/C++ header file')
+    elseif expand("%:e") == 'hpp'
+        call setline(1, '// C/C++ header file')
+    elseif expand("%:e") == 'cc'
+        call setline(1, '// Linux/Unix C++ source file')
+    elseif expand("%:e") == 'c'
+        call setline(1, '// C source file')
+    elseif expand("%:e") == 'cpp'
+        call setline(1, '// C++ source file')
+    elseif expand("%:e") == 'py'
+        call setline(1, '# -*- coding: UTF-8 -*-')
+    endif
+
+    call append(1, '/***********************************************')
+    call append(2, '# Copyright (c) 2018, Wuhan')
+    call append(3, '# All rights reserved.')
+    call append(4, '#')
+    call append(5, '# @Filename: '.expand("%"))
+    call append(6, '# @Version：V1.0')
+    call append(7, '# @Author: Frank Liu - frankliu624@gmail.com')
+    call append(8, '# @Description: ---')
+    call append(9, '# @Create Time: '.strftime("%Y-%m-%d %H:%M:%S"))
+    call append(10, '# @Last Modified: '.strftime("%Y-%m-%d %H:%M:%S"))
+    call append(11, '***********************************************/')
+"    call append(12, '')
+
+endfunc
+map <F2> :call SetComment()<CR>:10<CR>o
+
+" SET Comment END
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
