@@ -144,6 +144,7 @@ Plug 'rkulla/pydiction'
 Plug 'scrooloose/syntastic'
 Plug 'nvie/vim-flake8'
 Plug 'kien/ctrlp.vim'
+Plug 'skywind3000/vim-keysound'  " vim打字机
 
 call plug#end()            
 
@@ -331,6 +332,17 @@ let g:multi_cursor_next_key            = '<C-j>'
 let g:multi_cursor_prev_key            = '<C-k>'
 let g:multi_cursor_skip_key            = '<C-x>'
 let g:multi_cursor_quit_key            = '<Esc>'
+
+" vim 打字机效果vim-keysoind
+" vim启动时自启动
+let g:keysound_enable = 1
+" 设置默认主题，可以使用：default, typewriter, mario, bubble, sword
+let g:keysound_theme = 'default'
+" 设置Python版本:2 or 3,默认会自动检测
+let g:python_py_version = 3
+" 设置音量:0-1000
+let g:keysound_vloume = 1000
+
 
 " gv
 nnoremap <leader>g :GV<cr>
