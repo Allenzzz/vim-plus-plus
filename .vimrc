@@ -145,6 +145,7 @@ Plug 'scrooloose/syntastic'
 Plug 'nvie/vim-flake8'
 Plug 'kien/ctrlp.vim'
 Plug 'skywind3000/vim-keysound'  " vim打字机
+Plug 'Yggdroot/indentLine'      "缩进线
 
 call plug#end()            
 
