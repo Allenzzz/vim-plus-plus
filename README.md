@@ -66,6 +66,8 @@ Frank Liu的至尊无敌,py,go,c,c++,java,md终极配置vim-plus-plus
     sudo ./install.sh
     ```
 
+**注意：一般`YouCompleteMe`下载会失败，只要把本仓库下的`YouCompleteMe-full.7z`解压到.vim的plugged目录即可。**
+
 个性化
 ------------
 
