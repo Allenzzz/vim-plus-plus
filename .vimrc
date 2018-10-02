@@ -392,7 +392,8 @@ func SetComment()
     call append(9, '# @Create Time: '.strftime("%Y-%m-%d %H:%M:%S"))
     call append(10, '# @Last Modified: '.strftime("%Y-%m-%d %H:%M:%S"))
     call append(11, '***********************************************/')
-"    call append(12, '')
+    call append(12, ' ')
+"    call append(13, '')
 
 endfunc
 map <F2> :call SetComment()<CR>:10<CR>o
