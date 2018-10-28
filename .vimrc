@@ -146,6 +146,7 @@ Plug 'nvie/vim-flake8'
 Plug 'kien/ctrlp.vim'
 Plug 'skywind3000/vim-keysound'  " vim打字机
 Plug 'Yggdroot/indentLine'      "缩进线
+Plug 'vim-scripts/DoxygenToolkit.vim'   "代码注释
 
 call plug#end()            
 
@@ -230,6 +231,7 @@ nmap <F5> :YcmDiags<cr>
 set tags+=/usr/include/tags
 set tags+=~/.vim/systags
 set tags+=~/.vim/x86_64-linux-gnu-systags
+set tags+=/usr/local/include/tags
 let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_semantic_triggers =  {
   \   'c' : ['->', '.','re![_a-zA-z0-9]'],
