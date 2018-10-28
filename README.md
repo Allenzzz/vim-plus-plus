@@ -66,7 +66,10 @@ Frank Liu的至尊无敌,py,go,c,c++,java,md终极配置vim-plus-plus
     sudo ./install.sh
     ```
 
-**注意：一般`YouCompleteMe`下载会失败，只要把本仓库下的`YouCompleteMe-full.7z`解压到.vim的plugged目录即可。**
+### YouCompleteMe的安装问题
+
+由于`YouCompleteMe`插件一般会下载失败，Frank已经为您准备好了一切～您只需要把本仓库所有文件clone下来，运行install.sh安装脚本，就会自动解压相关文件到目标位置，免去后续下载安装过程。如果clone仓库较慢，您也可以直接下载`YouCompleteMe-full/YouCompleteMe.zip`手动解压到`～/.vim/plugged/`即可。
+
 
 个性化
 ------------

@@ -129,8 +129,17 @@ function install_fonts_on_linux()
     mkdir ~/.fonts
     rm -rf ~/.fonts/Droid\ Sans\ Mono\ Nerd\ Font\ Complete.otf
     cp ./fonts/Droid\ Sans\ Mono\ Nerd\ Font\ Complete.otf ~/.fonts
-
+    cp ./fonts/Droid\ Sans\ Mono\ for\ Powerline.otf ~/.fonts
+    cp ./fonts/Noto\ Mono\ for\ Powerline.ttf ~/.fonts
+    
+    # cp ./fonts/Droid\ Sans\ Mono\ Nerd\ Font\ Complete.otf /usr/share/fonts/truetype/droid
+    # cp ./fonts/Droid\ Sans\ Mono\ for\ Powerline.otf /usr/share/fonts/truetype/droid
+    # cp ./fonts/Noto\ Mono\ for\ Powerline.ttf /usr/share/fonts/opentype/noto
+    
+    mkfontscale
+	mkfontdir
     fc-cache -vf ~/.fonts
+    # fc-cache -vf /usr/share/fonts
 }
 
 # 下载插件管理软件vim-plug
