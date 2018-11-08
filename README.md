@@ -2,7 +2,7 @@
 
 An automatic configuration program for vim
 ===============================================
-Frank Liu的至尊无敌,py,go,c,c++,java,md终极配置vim-plus-plus
+Frank Liu的至尊无敌,py,go,c,c++,opencv,java,md终极配置vim-plus-plus
 
 ![][2]
 
@@ -66,11 +66,6 @@ Frank Liu的至尊无敌,py,go,c,c++,java,md终极配置vim-plus-plus
     sudo ./install.sh
     ```
 
-### YouCompleteMe的安装问题
-
-由于`YouCompleteMe`插件一般会下载失败，Frank已经为您准备好了一切～您只需要把本仓库所有文件clone下来，运行install.sh安装脚本，就会自动解压相关文件到目标位置，免去后续下载安装过程。如果clone仓库较慢，您也可以直接下载`YouCompleteMe-full/YouCompleteMe.zip`手动解压到`～/.vim/plugged/`即可。
-
-
 个性化
 ------------
 
@@ -114,6 +109,11 @@ Frank Liu的至尊无敌,py,go,c,c++,java,md终极配置vim-plus-plus
 | [vim-multiple-cursors][63]          | 多光标编辑                                                           |
 | [vim-smooth-scroll][60]             | 让翻页更顺畅                                                         |
 | [vim-expand-region][61]             | 快速选择区域                                                         |
+| [vim-go][66]                        | golang插件                                                          |
+| [vim-keysound][67]                  | vim打字机效果                                                        |
+| [indentLine][68]                    | 缩进线                                                              |
+| [DoxygenToolkit.vim][69]            | 代码自动注释                                                        |
+| [vim-markdown][70]                  | MarkDown Vim Mode, 语法高亮，规则匹配等                               |
 
 
 快捷键
@@ -160,7 +160,7 @@ Frank Liu的至尊无敌,py,go,c,c++,java,md终极配置vim-plus-plus
 Q & A
 ------------
 
-- **`安装vimplus后Airline等插件有乱码，怎么解决？`**
+- **`安装vimplusplus后Airline等插件有乱码，怎么解决？`**
 
     linux和mac系统需设置终端字体为`Droid Sans Mono Nerd Font`。
 
@@ -168,17 +168,19 @@ Q & A
 
     windows系统安装[Nerd Font][51]字体后并更改xshell字体即可。
 
-- **`安装vimplus会经常失败，安装了几次都不成功！！！`**
+- **`安装vimplusplus会经常失败，安装了几次都不成功！！！`**
 
-    vimplus安装时需要访问外国网站，由于网络原因，可能会失败，安装成功也要1个多小时，ycm插件有200M左右，下载比较耗时，这里有下载好的[YouCompleteMe.tar.gz][37]文件，下载后解压到~/.vim/plugged/目录，并进入YouCompleteMe目录执行`./install.py --clang-completer`即可安装。
+   vimplusplus安装时需要访问外国网站，由于网络原因，可能会失败，安装成功也要1个多小时，ycm插件有200M左右，下载比较耗时。Frank已经为您准备好了一切～您只需要把本仓库所有文件clone下来，运行`install.sh`安装脚本，就会自动解压相关文件到目标位置，免去后续下载安装过程。如果clone仓库较慢，您也可以直接下载`YouCompleteMe-full/YouCompleteMe.zip`手动解压到`～/.vim/plugged/`，并进入YouCompleteMe目录执行`./install.py --clang-completer`即可安装YCM。
+
+   [YouCompleteMe.tar.gz备用下载地址][37]
 
 - **`使用第三方库时怎么让ycm补全第三方库API？`**
 
-    vimplus安装完毕之后，`~`目录下将会生成两个隐藏文件分别是.vimrc和.ycm_extra_conf.py，其中.vimrc是vim的配置文件，.ycm_extra_conf.py是ycm插件的配置文件，当你需要创建一个project时，需要将.ycm_extra_conf.py拷贝到project的顶层目录，通过修改该配置文件里面的`flags`变量来添加你的第三方库路径。
+    vimplusplus安装完毕之后，`~`目录下将会生成两个隐藏文件分别是.vimrc和.ycm_extra_conf.py，其中.vimrc是vim的配置文件，.ycm_extra_conf.py是ycm插件的配置文件，当你需要创建一个project时，需要将.ycm_extra_conf.py拷贝到project的顶层目录，通过修改该配置文件里面的`flags`变量来添加你的第三方库路径。
 
-- **`安装vimplus完成后ycm不能够工作！！！`**
+- **`安装vimplusplus完成后ycm不能够工作！！！`**
 
-    这里的原因可能就有很多了，可能每个人遇到的问题不一样，但`vimplus`尽最大努力不让用户操心，需要注意的是ycm插件只支持`64`位的系统，更多信息请访问[ycm官网][38]。
+    这里的原因可能就有很多了，可能每个人遇到的问题不一样，但`vimplusplus`尽最大努力不让用户操心，需要注意的是ycm插件只支持`64`位的系统，更多信息请访问[ycm官网][38]。
 
 - **`在Archlinux环境下不能使用ycm怎么办？(缺少libtinfo.so.5)`**
 
@@ -188,7 +190,7 @@ Q & A
 
     您可以通过上网找解决方法，或提[Issues][39]，也可以通过发邮件方式`787280310@qq.com`一起讨论解决方法。
 
-- **`vimplus用起来真的太棒了，怎么办？`**
+- **`vimplusplus用起来真的太棒了，怎么办？`**
 
     那就麻烦您打赏一颗:star::star:吧，给予我继续维护的动力。
 
@@ -296,3 +298,8 @@ Q & A
   [63]: https://github.com/terryma/vim-multiple-cursors
   [64]: https://github.com/junegunn/gv.vim
   [65]: https://raw.githubusercontent.com/terryma/vim-multiple-cursors/master/assets/example1.gif
+  [66]: https://github.com/fatih/vim-go
+  [67]: https://github.com/skywind3000/vim-keysound
+  [68]: https://github.com/Yggdroot/indentLine
+  [69]: https://github.com/vim-scripts/DoxygenToolkit.vim
+  [70]: https://github.com/plasticboy/vim-markdown
