@@ -360,7 +360,7 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " SET Comment START
 """"""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd BufNewFile *.go,*.java,*.h,*.hpp,*.c,*.cc,*.cpp,*.sh,*.py exec ":call SetComment()" 
+autocmd BufNewFile *.go,*.java,*.h,*.hpp,*.c,*.cc,*.cpp,*.sh,*.py,*.m exec ":call SetComment()" 
 "|normal 10Go
 func SetComment()
     if expand("%:e") == 'go'
@@ -381,6 +381,8 @@ func SetComment()
         call setline(1, '#!/bin/bash')
     elseif expand("%:e") == 'py'
         call setline(1, '# -*- coding: UTF-8 -*-')
+    elseif expand("%:e") == 'm'
+        call setline(1, '# MATLIB/Octave source file')
     endif
 
     call append(1, '/***********************************************')
