@@ -78,6 +78,8 @@ flags = [
 '/usr/include',
 '-isystem',
 '/usr/local/include',
+'-isystem',
+'/usr/local/include/opencv4',
 
 #'-isystem',
 #'../BoostParts',
