@@ -148,6 +148,9 @@ Plug 'skywind3000/vim-keysound'  " vim打字机
 Plug 'Yggdroot/indentLine'      "缩进线
 Plug 'vim-scripts/DoxygenToolkit.vim'   "代码注释
 Plug 'cpiger/NeoDebug'          " C++ debug
+Plug 'lervag/vimtex'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 
 call plug#end()            
@@ -359,6 +362,13 @@ nnoremap <leader>gg :GV?<cr>
 if filereadable(expand($HOME . '/.vimrc.local'))
     source $HOME/.vimrc.local
 endif
+
+" vimtex settings
+let g:tex_flavor='latex'
+let g:vimtex_view_method='zathura'
+let g:vimtex_quickfix_mode=0
+set conceallevel=1
+let g:tex_conceal='abdmg'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " SET Comment START
