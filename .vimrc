@@ -147,6 +147,8 @@ Plug 'kien/ctrlp.vim'
 Plug 'skywind3000/vim-keysound'  " vim打字机
 Plug 'Yggdroot/indentLine'      "缩进线
 Plug 'vim-scripts/DoxygenToolkit.vim'   "代码注释
+Plug 'cpiger/NeoDebug'          " C++ debug
+
 
 call plug#end()            
 
@@ -387,7 +389,7 @@ func SetComment()
     endif
 
     call append(1, '/***********************************************')
-    call append(2, '# Copyright (c) 2018, Wuhan')
+    call append(2, '# Copyright (c) 2019, Shanghai')
     call append(3, '# All rights reserved.')
     call append(4, '#')
     call append(5, '# @Filename: '.expand("%"))
