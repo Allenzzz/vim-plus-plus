@@ -7,9 +7,9 @@
 "                    /_/
 "            
 "
-" Author: chxuan <787280310@qq.com>
-" Repository: https://github.com/chxuan/vimplus
-" Create Date: 2016-04-10
+" Author: frankliu <frankliu624@gmail.com>
+" Repository: https://github.com/FLHonker/vim-plus-plus
+" Create Date: 2017-06-24
 " License: MIT
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -49,10 +49,6 @@ set smarttab             " 在行和段开始处使用制表符
 set nowrap               " 禁止折行
 set backspace=2          " 使用回车键正常处理indent,eol,start等
 
-"copy and paste-settings
-vmap <C-c> "+y
-nmap <C-v> "+p
-set pastetoggle=<F12>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 代码补全
@@ -151,7 +147,7 @@ Plug 'cpiger/NeoDebug'          " C++ debug
 Plug 'lervag/vimtex'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-
+Plug 'ervandew/supertab'
 
 call plug#end()            
 
@@ -220,6 +216,10 @@ let g:NERDTreeDirArrowExpandable='▷'
 let g:NERDTreeDirArrowCollapsible='▼'
 
 " YCM
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
 let g:ycm_confirm_extra_conf = 0 
 let g:ycm_error_symbol = '>>'
 let g:ycm_warning_symbol = '>*'
@@ -227,17 +227,6 @@ let g:ycm_seed_identifiers_with_syntax = 1
 let g:ycm_complete_in_comments = 1 
 let g:ycm_complete_in_strings = 1 
 let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-nnoremap <leader>u :YcmCompleter GoToDeclaration<cr>
-nnoremap <leader>i :YcmCompleter GoToDefinition<cr>
-nnoremap <leader>o :YcmCompleter GoToInclude<cr>
-nnoremap <leader>ff :YcmCompleter FixIt<cr>
-nmap <F5> :YcmDiags<cr>
-
-" ctags
-set tags+=/usr/include/tags
-set tags+=~/.vim/systags
-set tags+=~/.vim/x86_64-linux-gnu-systags
-set tags+=/usr/local/include/tags
 let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_semantic_triggers =  {
   \   'c' : ['->', '.','re![_a-zA-z0-9]'],
@@ -253,6 +242,17 @@ let g:ycm_semantic_triggers =  {
   \   'erlang' : [':'],
   \ }
 let g:ycm_semantic_triggers.c = ['->', '.', ' ', '(', '[', '&',']']
+nnoremap <leader>u :YcmCompleter GoToDeclaration<cr>
+nnoremap <leader>i :YcmCompleter GoToDefinition<cr>
+nnoremap <leader>o :YcmCompleter GoToInclude<cr>
+nnoremap <leader>ff :YcmCompleter FixIt<cr>
+nmap <F5> :YcmDiags<cr>
+
+" ctags
+set tags+=/usr/include/tags
+set tags+=~/.vim/systags
+set tags+=~/.vim/x86_64-linux-gnu-systags
+set tags+=/usr/local/include/tags
 
 " a.vim: .h -> .cpp or .cpp -> .h
 nnoremap <silent> <leader>a :A<cr>
@@ -369,6 +369,16 @@ let g:vimtex_view_method='zathura'
 let g:vimtex_quickfix_mode=0
 set conceallevel=1
 let g:tex_conceal='abdmg'
+
+" UltiSnips 
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " SET Comment START

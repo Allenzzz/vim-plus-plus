@@ -111,7 +111,7 @@ function copy_files()
 
     # UltiSnips
     rm -rf ~/.vim/UltiSnips
-    ln -s ${PWD}/UltiSnips ~/.vim 
+    ln -s ${PWD}/UltiSnips ~/.vim
     
     # 解压和复制YouCompleteMe插件文件(容易下载失败，故提前为您准备好了～)
     if [ -f "YouCompleteMe-full/YouCompleteMe.zip" ];then
