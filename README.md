@@ -23,7 +23,7 @@ Frank Liu的至尊无敌,py,go,c,c++,opencv,java,md终极配置vim-plus-plus
 - 安装vimplus
 
     ```bash
-    git clone https://github.com/chxuan/vimplus.git ~/.vimplus
+    git clone https://github.com/FLHonker/vim-plus-plus.git ~/.vimplus
     cd ~/.vimplus
     ./install.sh
     ```
@@ -37,7 +37,7 @@ Frank Liu的至尊无敌,py,go,c,c++,opencv,java,md终极配置vim-plus-plus
 - 安装vimplus
 
     ```bash
-    git clone https://github.com/chxuan/vimplus.git ~/.vimplus
+    git clone https://github.com/FLHonker/vim-plus-plus.git ~/.vimplus
     cd ~/.vimplus
     sudo ./install.sh
     ```
@@ -51,7 +51,7 @@ Frank Liu的至尊无敌,py,go,c,c++,opencv,java,md终极配置vim-plus-plus
 - 安装vimplus
 
     ```bash
-    git clone https://github.com/chxuan/vimplus.git ~/.vimplus
+    git clone https://github.com/FLHonker/vim-plus-plus.git ~/.vimplus
     cd ~/.vimplus
     sudo ./install.sh
     ```
@@ -61,7 +61,7 @@ Frank Liu的至尊无敌,py,go,c,c++,opencv,java,md终极配置vim-plus-plus
 - 安装vimplus
 
     ```bash
-    git clone https://github.com/chxuan/vimplus.git ~/.vimplus
+    git clone https://github.com/FLHonker/vim-plus-plus.git ~/.vimplus
     cd ~/.vimplus
     sudo ./install.sh
     ```
