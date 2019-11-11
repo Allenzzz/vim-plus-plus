@@ -114,6 +114,7 @@ Frank Liu的至尊无敌,py,go,c,c++,opencv,java,md终极配置vim-plus-plus
 | [indentLine][68]                    | 缩进线                                                              |
 | [DoxygenToolkit.vim][69]            | 代码自动注释                                                        |
 | [vim-markdown][70]                  | MarkDown Vim Mode, 语法高亮，规则匹配等                               |
+| [tabnine-vim][71]                   | AI补全插件，替代YMC                                                  |
 
 
 快捷键
