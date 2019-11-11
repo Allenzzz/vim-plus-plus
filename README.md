@@ -304,3 +304,4 @@ Q & A
   [68]: https://github.com/Yggdroot/indentLine
   [69]: https://github.com/vim-scripts/DoxygenToolkit.vim
   [70]: https://github.com/plasticboy/vim-markdown
+  [71]: https://github.com/zxqfl/tabnine-vim
